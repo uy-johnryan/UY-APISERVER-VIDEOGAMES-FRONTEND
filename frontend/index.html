@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>🎮 Video Game Manager</h1>
+            <p>Manage your video game collection</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Status message -->
+        <div id="statusMessage" class="status-message"></div>
+
+        <!-- Add / Edit Game -->
+        <section class="form-section">
+            <div class="section-header">
+                <h2 id="formTitle">Add New Game</h2>
+                <button id="cancelEditButton" class="cancel-button hidden">
+                    Cancel Edit
+                </button>
+            </div>
+
+            <form id="gameForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input
+                            type="text"
+                            id="title"
+                            placeholder="e.g. Minecraft"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genre">Genre</label>
+                        <input
+                            type="text"
+                            id="genre"
+                            placeholder="e.g. Sandbox"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="platform">Platform</label>
+                        <input
+                            type="text"
+                            id="platform"
+                            placeholder="e.g. PC"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="release_year">Release Year</label>
+                        <input
+                            type="number"
+                            id="release_year"
+                            placeholder="e.g. 2011"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="developer">Developer</label>
+                        <input
+                            type="text"
+                            id="developer"
+                            placeholder="e.g. Mojang Studios"
+                        >
+                    </div>
+
+                </div>
+
+                <button type="submit" id="submitButton" class="primary-button">
+                    Add Game
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Games List -->
+        <section class="games-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>Game Collection</h2>
+                    <p id="gameCount">Loading games...</p>
+                </div>
+
+                <button id="refreshButton" class="secondary-button">
+                    ↻ Refresh
+                </button>
+            </div>
+
+            <div id="loading" class="loading">
+                Loading games...
+            </div>
+
+            <div id="gamesContainer" class="games-container"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Video Game API & Frontend</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
